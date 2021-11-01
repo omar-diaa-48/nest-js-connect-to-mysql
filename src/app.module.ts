@@ -16,7 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       imports:[ConfigModule],
       name:'db-connection',
       useFactory: async (configService : ConfigService) => ({
-      type:'mysql',
+        type:'mysql',
         host:configService.get('db.host'),
         port:configService.get('db.port'),
         username:configService.get('db.username'),
